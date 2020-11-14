@@ -2,27 +2,15 @@ package tree;
 
 /**
  *
- * 创建一个节点
+ * 创建一个二叉树节点
  */
 public class TreeNode<T> {
 
-    public T data;// 数据域
-    public TreeNode<T> child, sibling;// 链，分别指向孩子，兄弟结点
+    public T data;
+    public TreeNode<T> leftChild;
+    public TreeNode<T> rightChild;
 
-    // 构造结点，参数分别指定元素，孩子和兄弟结点
-    public TreeNode(T data, TreeNode<T> child, TreeNode<T> sibling) {
-        super();
+    public  TreeNode(T data) {
         this.data = data;
-        this.child = child;
-        this.sibling = sibling;
-    }
-
-    // 构造叶子结点
-    public TreeNode(T data) {
-        this(data, null, null);
-    }
-
-    public TreeNode() {
-        this(null);
     }
 }
