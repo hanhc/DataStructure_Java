@@ -39,6 +39,16 @@ public class BinaryTree {
     }
 
     /**
+     * 树的高度
+     */
+    public static int maxDepth(TreeNode root) {
+        if(root ==  null){
+            return 0;
+        }
+        return Math.max(maxDepth(root.leftChild), maxDepth(root.rightChild)) + 1;
+    }
+
+    /**
      * 二叉树前序遍历，递归
      */
     public static void preOrderTravel(TreeNode node) {
@@ -83,5 +93,7 @@ public class BinaryTree {
         inOrderTravel(treeNode);
         System.out.println("后序遍历: ");
         postOrderTravel(treeNode);
+        System.out.println("高度：" + maxDepth(treeNode));
+
     }
 }
